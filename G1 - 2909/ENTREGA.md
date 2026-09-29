@@ -104,24 +104,24 @@ SELECT COUNT(*) AS total
 ### 1. Serial Monitor (movimento, estado da sala e HTTP 201)
 Sequência VAZIA → OCUPADA → VAZIA → DESPERDICIO, com todos os envios retornando HTTP 201.
 
-![Serial Monitor](print1-serial.png)
+![Serial Monitor](<print1.png>)
 
 ### 2. GET /ultimo-movimento
 Resultado: `{"segundos":197,"ultimo_ts":1790723970452}`, ou seja, o último movimento ocorreu há 197 s.
 
-![/ultimo-movimento](print2-ultimo-movimento.png)
+![/ultimo-movimento](<print 2.png>)
 
 ### 3. GET /por-hora
 Resultado: `[{"hora":"20","movimentos":3}]`, com 3 movimentos às 20h (horário de Brasília).
 
-![/por-hora](print3-por-hora.png)
+![/por-hora](<print 3.png>)
 
 ### 4. GET /luz-resumo
 Resultado: `{"total":18,"acesas":16,"percentual_acesa":88.9}`, ou seja, 16 de 18 leituras com luz acesa (88,9%).
 
-![/luz-resumo](print4-luz-resumo.png)
+![/luz-resumo](<print 4.png>)
 
 ### 5. GET /desperdicio
 Resultado: `{"leituras_desperdicio":11,"janela_minutos":2}`, ou seja, 11 leituras com luz acesa sem movimento nos 2 minutos anteriores.
 
-![/desperdicio](print5-desperdicio.png)
+![/desperdicio](<print 5.png>)
